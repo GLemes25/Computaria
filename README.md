@@ -1,46 +1,66 @@
---------------------------- PROJETO DE RUIDO EM UMA IMAGEM ---------------------------
-#Participantes do projeto :
--Matheus Alexandre  RA 181441
--Leonel Solano RA 
--Thiago Olswezski RA 182687
--Gabriel Lemes RA 181502
+# Projeto de Ruido em uma imagem
 
-#ExplicaÁ„o do projeto: O projeto de adiÁ„o de ruido, suavizaÁ„o & borda, consiste em um programa com men˙ interativo por terminal, no qual, o usu·rio consegue inserir os dados e valores desejados para manipulaÁ„o da imagem que o mesmo especificou. Este programa surgiu com o intuito de mostrar os efeitos produzidos na imagem, quando nela s„o inseridos diferentes tipos de ruido, suavizaÁ„o e atÈ mesmo detecÁ„o de bordas dependendo das necesidades do usu·rio. Logo a seguir, ser· explicado como foi a realizaÁ„o completa do projeto.
+  **Participantes do projeto :**  
+              Matheus Alexandre - RA 181441  
+              Leonel Solano - RA 181127     
+              Thiago Olswezski - RA 182687    
+              Gabriel Lemes - RA 181502 
 
-------------------------------- REALIZA«√O DO PROJETO --------------------------------
-O projeto se dividiu em 2 partes, menu + ruido(Matheus & Leonel) e suavizaÁ„o + bordas(Thiago & Gabriel), todas as informaÁıes que encontramos sobre o tema foram retiradas do youtube(conceitos sobre ruido, suavizaÁ„o e bordas; utilizaÁ„o do opencv para processamento de imagens, plotagem de imagens em uma tela com matplotlib), stack overflow e livros da biblioteca virtual ucdb(python3; python: conceito e aplicaÁıes).
-Para a criaÁ„o do projeto foram feitos varios testes em grupos separados, sendo eles o de menu e o de suavizaÁ„o, todos eles tentando minimizar as linhas de cÛdigos usadas para que o cÛdigo/projeto fique mais simples para o entendimento do usu·rio. Ao finalizar o projeto, testes relacionados ao programa(realizados parte por parte dependendo de cada grupo(menu/suavizaÁ„o)) foram feitos, testados e alterados atravÈs da plataforma github, alguns deles sendo: implementaÁ„o de um menu gr·fico e interativo por janela; plotagem das imagens em janela junto de uma barra interativa, assim o usu·rio poderia manipular as imagens sem precisar inserir valor por valor; minimizaÁ„o e refatoraÁ„o do cÛdigo.
-ApÛs a realizaÁ„o das partes do projeto(MENU / RUIDO / SUAVIZA«√O / BORDAS), foi feito a montagem do programa principal, no qual algumas funÁıes foram substituÌdas por outras para uma melhor visualizaÁ„o do projeto, algumas delas sendo: o modo como o usu·rio inseria a imagem & a presentaÁ„o por janela do resultado de processamento da imagem.
-Com isso, o projeto chegou a sua conclus„o final, sendo essa: um programa capaz de receber um caminho de diretÛrio que pode ser alterado sem precisar fechar o mesmo; fazer a transformaÁ„o da imagem por meio dos valores que o usu·rio insere(ruido, suavizaÁ„o e borda); apresentaÁ„o por janela da imagem original com sua transformaÁ„o ao lado.
+  **Explica√ß√£o do projeto:** O projeto de adi√ß√£o de ruido, suaviza√ß√£o & borda, consiste em um programa com men√∫ interativo por terminal, no qual, o usu√°rio consegue inserir os dados e valores desejados para manipula√ß√£o da imagem que o mesmo especificou. Este programa surgiu com o intuito de mostrar os efeitos produzidos na imagem, quando nela s√£o inseridos diferentes tipos de ruido, suaviza√ß√£o e at√© mesmo detec√ß√£o de bordas dependendo das necesidades do usu√°rio. Logo a seguir, ser√° explicado como foi a realiza√ß√£o completa do projeto.
 
-Link com funcionamento do programa: 
+  # Realiza√ß√£o do Projeto
+
+O projeto se dividiu em 2 partes, menu + ruido(Matheus & Leonel) e suaviza√ß√£o + bordas(Thiago & Gabriel), todas as informa√ß√µes que encontramos sobre o tema foram retiradas do youtube(conceitos sobre ruido, suaviza√ß√£o e bordas; utiliza√ß√£o do opencv para processamento de imagens, plotagem de imagens em uma tela com matplotlib), stack overflow e livros da biblioteca virtual ucdb(python3; python: conceito e aplica√ß√µes).
+Para a cria√ß√£o do projeto foram feitos varios testes em grupos separados, sendo eles o de menu e o de suaviza√ß√£o, todos eles tentando minimizar as linhas de c√≥digos usadas para que o c√≥digo/projeto fique mais simples para o entendimento do usu√°rio. Ao finalizar o projeto, testes relacionados ao programa(realizados parte por parte dependendo de cada grupo(menu/suaviza√ß√£o)) foram feitos, testados e alterados atrav√©s da plataforma github, alguns deles sendo: implementa√ß√£o de um menu gr√°fico e interativo por janela; plotagem das imagens em janela junto de uma barra interativa, assim o usu√°rio poderia manipular as imagens sem precisar inserir valor por valor; minimiza√ß√£o e refatora√ß√£o do c√≥digo.
+Ap√≥s a realiza√ß√£o das partes do projeto(MENU / RUIDO / SUAVIZA√á√ÉO / BORDAS), foi feito a montagem do programa principal, no qual algumas fun√ß√µes foram substitu√≠das por outras para uma melhor visualiza√ß√£o do projeto, algumas delas sendo: o modo como o usu√°rio inseria a imagem & a presenta√ß√£o por janela do resultado de processamento da imagem.
+Com isso, o projeto chegou a sua conclus√£o final, sendo essa: um programa capaz de receber um caminho de diret√≥rio que pode ser alterado sem precisar fechar o mesmo; fazer a transforma√ß√£o da imagem por meio dos valores que o usu√°rio insere(ruido, suaviza√ß√£o e borda); apresenta√ß√£o por janela da imagem original com sua transforma√ß√£o ao lado.
+
+  **Link com funcionamento do programa:**   
 https://drive.google.com/drive/folders/1bIRWHx1K8o5hFrPz7ZFCkcgkYKnJ2H1v?usp=sharing
 
 --------------------------------------------------------------------------------------
-Bibliotecas utilizadas no programa
+**Bibliotecas utilizadas no programa**
 
-from contextlib import nullcontext     #parte da biblioteca desde a vers„o 2.5 fonte:
-https://docs.python.org/3/library/contextlib.html
-from email.mime import image
-from sequence import Sequence
-from turtle import end_fill
-import cv2
-import numpy as np
-import random            #parte da biblioteca python, necess·rio apenas o comando import
-import os                #parte da biblioteca python, necess·rio apenas o comando import
-from matplotlib import pyplot as plt
-from PIL import Image, ImageFilter
-from skimage import io, color
+    from contextlib import nullcontext     #parte da biblioteca desde a vers√£o 2.5 fonte:
+
+    https://docs.python.org/3/library/contextlib.html
+
+    from email.mime import image
+
+    from sequence import Sequence
+
+    from turtle import end_fill
+
+    import cv2
+
+    import numpy as np
+
+    import random            #parte da biblioteca python, necess√°rio apenas o comando import
+
+    import os                #parte da biblioteca python, necess√°rio apenas o comando import
+
+    from matplotlib import pyplot as plt
+
+    from PIL import Image, ImageFilter
+
+    from skimage import io, color
 
 --------------------------------------------------------------------------------------
-Comandos para instalaÁ„o apÛs ativaÁ„o do conda *conda activate vc
-Para a instalaÁ„o das bibliotecas a seguir, ser· necess·rio abrir o prompt de comando e instalar todas as bibliotecas citadas abaixo de forma individual, com algumas delas ja estando presentes na biblioteca python como ja foi citado anteriormente.
+**Comandos para instala√ß√£o** ap√≥s ativa√ß√£o do conda (conda activate vc)
+Para a instala√ß√£o das bibliotecas a seguir, ser√° necess√°rio abrir o prompt de comando e instalar todas as bibliotecas citadas abaixo de forma individual, com algumas delas ja estando presentes na biblioteca python como ja foi citado anteriormente.
 
-pip install email.mime
-pip instal Sequence
-pip install turtle
-pip install opencv-python
-pip install numpy
-pip install matplotlib
-pip install pillow
-pip install scikit-image
+    pip install email.mime
+
+    pip instal Sequence
+
+    pip install turtle
+
+    pip install opencv-python
+
+    pip install numpy
+
+    pip install matplotlib
+
+    pip install pillow
+
+    pip install scikit-image
